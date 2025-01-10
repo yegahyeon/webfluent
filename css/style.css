@@ -1,0 +1,47 @@
+@charset 'utf-8';
+
+/* main design  */
+#main > section {
+    padding: 6rem 0;
+    border: 1px solid #000;
+}
+
+/* 
+css 개별성 규칙
+-id로 정의한 이름 사용 (#) : 100점
+-class로 정의한 이름 사용 :10점
+-태그로 정의한 이름 사용 : 1점
+예) #portfolio .works-list .item h4 + p --> 100 + 10 + 10 + 1 + 1 = 122점
+*/
+.visual {
+    background: skyblue;
+    height: 46rem;
+    padding: 0 !important; /* 개별성 규칙 무력화 */
+    position: relative;
+}
+
+.visual::before {
+    content: '';
+    display: block;
+    height: 100%;
+    background: url(https://cdn.imweb.me/upload/S20210807d1f68b7a970c2/7170113c6a983.jpg) no-repeat 0 0 / cover;
+
+    position: absolute;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.visual .inner {
+    position: relative;
+}
+
+.visual-title {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+}

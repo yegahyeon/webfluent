@@ -4,13 +4,13 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
 
 :root {
-    font-size: 62.5%;
-    /* fz62.5p:루트에 들어오는 글자 크기는 10px -> 1rem */
+    font-size: 62.5%; /* fz62.5p: 루트에 들어오는 글자 크기는 10px -> 1rem */
     --main-color: #3189ff;
-    --main-color-light: rgba(49, 137, 255, 0.3);
     --main-color-dark: #1f60b8;
+    --main-color-light: rgba(49, 137, 255, 0.3);
     --title-color: #222;
     --text-color: #555;
+    --black10p: rgba(0, 0, 0, 0.1);
     --black20p: rgba(0, 0, 0, 0.2);
     --black30p: rgba(0, 0, 0, 0.3);
     --black40p: rgba(0, 0, 0, 0.4);
@@ -40,7 +40,7 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* tdu */
     color: var(--main-color);
 }
 
@@ -51,30 +51,34 @@ hr,
     width: 1px;
     height: 1px;
     overflow: hidden;
-    clip: rect();
+    clip: rect(0, 0, 0, 0);
 }
 
 body {
-    font: 1.6em/1.7 'Jost', 'Pretendard', sans-serif;
+    font: 1.6rem/1.7 'Jost', 'Pretendard', sans-serif;
 }
 
 .inner {
+    /* w118r+m0-a+bg */
     width: 118rem;
     margin: 0 auto;
-    background: rgba(255, 255, 0, 0.1);
+    /* background: rgba(255, 255, 0, 0.1); */
 }
 
 #header {
+    /* h12r+bg#fff+bxsh */
     background: #fff;
-    box-shadow: 0 0.2rem 0.4rem var(--white20p);
+    box-shadow: 0 4px 20px var(--black10p);
 }
 
 #header nav {
+    height: 12rem;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#header .logo a {
+.logo a {
     display: block;
     width: 16.4rem;
     height: 3.2rem;
@@ -89,6 +93,7 @@ body {
     display: block;
     /* border: 1px solid #000; */
     padding: 1rem 3rem;
+    /* fw700+fz1.8r+lh1.5 */
     font-weight: 700;
     font-size: 1.8rem;
     line-height: 1.5;
@@ -104,9 +109,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: column;
-    /* fxdrr */
-    flex-direction: row-reverse;
+
+    flex-direction: column; /* fxdc */
+    flex-direction: row-reverse; /* fxdrr */
 }
 
 .foot-logo {
